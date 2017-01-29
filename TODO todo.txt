@@ -11,8 +11,8 @@ whats TODO? Weekend 4 full-stack challenge
   [x] create task 'submit' button
 
   [x] display submitted tasks
-  [] COMPLETE button
-      [] change color of task to green on completion
+  [x] COMPLETE button
+      [x] change color of task to green on completion
   [] DELETE button
 
 
