@@ -13,7 +13,7 @@ whats TODO? Weekend 4 full-stack challenge
   [x] display submitted tasks
   [x] COMPLETE button
       [x] change color of task to green on completion
-  [] DELETE button
+  [x] DELETE button
 
 
 

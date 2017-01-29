@@ -3,7 +3,7 @@ $(function() {
   getTasks();
   $('#addTaskButton').on('click', addTask);
   $('.displayContainer').on('click', '.complete',  completeTask);
-  $('.displayContainer').on('click', '.delete',  deleteTask);
+  $('.displayContainer').on('click', '.delete', deleteTask);
 
 }); // end doc ready
 
@@ -23,6 +23,7 @@ function addTask(event) {
       getTasks();
     }
   }); // end ajax POST
+// $(this).closest('form').find("input[type=text], textarea").val("");
 }// end addTask()
 
 
@@ -59,13 +60,18 @@ function deleteTask() {
   console.log('deleteTask called on ', $(this).closest('li'));
   event.preventDefault();
   var taskId=$(this).attr('id');
-  // var formData = $(this).closest('li').serialize();
-  // console.log('formData: ', formData, 'id: ', taskId);
-  $.ajax({
-  url:'/tasks/'+ taskId,
-  type: 'DELETE',
-  success: function() {
-    getTasks();
-  }
-  }); // end ajax DELETE
+  var okToDelete = confirm("Are you sure you want to delete this task?");
+    if(okToDelete == true){
+      $.ajax({
+      url:'/tasks/'+ taskId,
+      type: 'DELETE',
+      success: function() {
+        getTasks();
+      }
+      }); // end ajax DELETE
+    } else {
+      return;
+    }
+  // console.log('clicked id: ', taskId);
+
 }
