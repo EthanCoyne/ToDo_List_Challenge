@@ -23,4 +23,4 @@ whats TODO? Weekend 4 full-stack challenge
   [x] 'are you sure?' prompt on DELETE
 
   --Pro mode--
-  [] move completed tasks to bottom of page
+  [x] move completed tasks to bottom of page

@@ -13,6 +13,7 @@ function addTask(event) {
   console.log('addTask() called');
   var formData = $(this).closest('form').serialize();
   console.log(formData);
+  $(this).closest('form').find("input[type=text], textarea").val("");
 
   $.ajax({
     url:'/tasks',
@@ -23,7 +24,7 @@ function addTask(event) {
       getTasks();
     }
   }); // end ajax POST
-// $(this).closest('form').find("input[type=text], textarea").val("");
+
 }// end addTask()
 
 
@@ -69,7 +70,7 @@ function completeTask() {
     type: 'PUT',
     success: function() {
       console.log('completeTask PUT for: ', taskId);
-      location.reload();
+      getTasks();
     }
   }); //end ajax PUT
 }// end completeTask()

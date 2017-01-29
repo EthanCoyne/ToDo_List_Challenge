@@ -9,21 +9,24 @@
   <title>To-Do challenge</title>
 </head>
 <body>
+  <div class="lines"></div>
   <div class="container">
-    <h1>What's all the To-Do?</h1>
+    <h1>What's All the To-Do?</h1>
+    <div class="formDiv">
     <h3>Add a task!</h3>
-    <form id="taskForm">
-      <div class="form-group">
-        <input type="text" id="taskAddForm" name="taskAddForm" style="height: 50px; width: 200px;"/>
+      <form id="taskForm">
+        <div class="form-group">
+          <input type="text" id="taskAddForm" name="taskAddForm"/>
+        </div>
+        <button id="addTaskButton" class="btn btn-default">Add task!</button>
       </div>
-      <button id="addTaskButton" class="btn btn-default">Add task!</button>
     </form>
-    <h3>Check your To-do list!</h3>
-    <div class="displayContainer">
-      <ul id="taskDisplay">
+    <h4>Check your To-do list!</h3>
+      <div class="displayContainer">
+        <ul id="taskDisplay">
 
-      </ul>
+        </ul>
+      </div>
     </div>
-  </div>
-</body>
-</html>
+  </body>
+  </html>

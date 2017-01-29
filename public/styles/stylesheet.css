@@ -1,3 +1,95 @@
 .completed {
   background-color: green;
+  text-decoration: line-through;
+}
+
+/*li {
+  margin-top: 5px;
+}*/
+
+#taskAddForm {
+  height: 100px;
+  width: 98%;
+}
+
+html {
+  background-image: url('http://wallpapercave.com/wp/vKeJ1XI.jpg') ;
+  background-size: cover;
+}
+
+p {
+  display: inline;
+}
+
+.completeButton, .delete {
+  float: right;
+}
+
+body {
+  display: flex;
+  background-color: #f5f5f5;
+  width: 600px;
+  margin: 0 auto;
+  padding: 0;
+
+  height 100%;
+}
+
+h1 {
+  text-align: center;
+  text-decoration: underline;
+}
+
+h4 {
+  text-align: center;
+  color: #cd0000;
+  font-size: 30px;
+  letter-spacing: -2px;
+}
+
+.formDiv {
+  padding-left: 10px;
+}
+
+.container {
+  color: #555;
+  font-size: 16px;
+  padding: 0 !important;
+  width: 500px;
+  font-family: courier, monospace;
+  /*border: 1px solid #dedede;*/
+}
+
+ li {
+  list-style:square;
+  border-bottom: 1px dotted #ccc;
+  text-indent: 25px;
+  height: auto;
+  padding: 10px;
+}
+
+li:hover {
+  background-color: #f0f0f0;
+  -webkit-transition: all 0.2s;
+  -moz-transition:    all 0.2s;
+  -ms-transition:     all 0.2s;
+  -o-transition:      all 0.2s;
+}
+
+.completeButton:hover, .delete:hover {
+  background-color: #f0f0f0;
+  -webkit-transition: all 0.2s;
+  -moz-transition:    all 0.2s;
+  -ms-transition:     all 0.2s;
+  -o-transition:      all 0.2s;
+}
+
+.lines {
+  border-left: 1px solid #ffaa9f;
+  border-right: 1px solid #ffaa9f;
+  width: 2px;
+  min-height: 100%;
+  height: auto;
+  float: left;
+  margin-left: 40px;
 }
