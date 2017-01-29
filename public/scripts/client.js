@@ -69,6 +69,7 @@ function completeTask() {
     type: 'PUT',
     success: function() {
       console.log('completeTask PUT for: ', taskId);
+      location.reload();
     }
   }); //end ajax PUT
 }// end completeTask()

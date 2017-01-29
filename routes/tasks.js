@@ -39,7 +39,7 @@ router.get('/',function(req,res){
       done();
     } else {
      client.query(
-       'SELECT * FROM tasks',
+       'SELECT * FROM tasks ORDER BY completed',
       function(err,result){
         done();
         if(err){
