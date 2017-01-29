@@ -1,14 +1,15 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <script type="text/javascript" src="/assets/vendors/jquery.min.js" charset="utf-8"></script>
-    <script type="text/javascript" src="/scripts/client.js" charset="utf-8"></script>
-    <link rel="stylesheet" href="assets/vendors/bootstrap.min.css">
-    <meta charset="utf-8">
-    <title>To-Do challenge</title>
-  </head>
-  <body>
-    <div class="container">
+<head>
+  <script type="text/javascript" src="/assets/vendors/jquery.min.js" charset="utf-8"></script>
+  <script type="text/javascript" src="/scripts/client.js" charset="utf-8"></script>
+  <link rel="stylesheet" href="assets/vendors/bootstrap.min.css">
+  <link rel="stylesheet" href="/styles/stylesheet.css">
+  <meta charset="utf-8">
+  <title>To-Do challenge</title>
+</head>
+<body>
+  <div class="container">
     <h1>What's all the To-Do?</h1>
     <h3>Add a task!</h3>
     <form id="taskForm">
@@ -18,9 +19,11 @@
       <button id="addTaskButton" class="btn btn-default">Add task!</button>
     </form>
     <h3>Check your To-do list!</h3>
-    <ul id="taskDisplay">
+    <div class="displayContainer">
+      <ul id="taskDisplay">
 
-    </ul>
+      </ul>
     </div>
-  </body>
+  </div>
+</body>
 </html>

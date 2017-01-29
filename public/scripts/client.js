@@ -1,7 +1,9 @@
 $(function() {
   console.log('welcome to the DOM');
-  $('#addTaskButton').on('click', addTask)
   getTasks();
+  $('#addTaskButton').on('click', addTask);
+  $('.displayContainer').on('click', '.complete',  completeTask);
+
 }); // end doc ready
 
 
@@ -39,10 +41,15 @@ function displayTasks(tasks) {
   tasks.forEach(function(task) {
     var $li = $('<li></li>');
 
-    $li.append('<p>' + task.task + '</p>');
-    $li.append('<button id="'+task.id+'" class="complete">Complete</button>');
-    $li.append('<button id="'+task.id+'" class="delete">Delete</button>');
+    $li.append('<p id="task'+task.id+'">' + task.task + '</p>');
+    $li.append('<button id="complete'+task.id+'" class="complete">Complete</button>');
+    $li.append('<button id="delete'+task.id+'" class="delete">Delete</button>');
 
     $('#taskDisplay').append($li);
   }); // end tasks.forEach
 } // end displayTasks()
+
+function completeTask() {
+  console.log('completeTask called on', $(this).closest('li'));
+  $(this).closest('li').addClass('completed');
+}// end completeTask()

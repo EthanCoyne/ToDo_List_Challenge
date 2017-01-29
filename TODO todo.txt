@@ -1,16 +1,16 @@
 whats TODO? Weekend 4 full-stack challenge
 
 1. Create Database:
-  []create todo table, with rows for:
-    [] id
-    [] task
-    [] completed? (1 or null)
+  [x]create todo table, with rows for:
+    [x] id
+    [x] task
+    [x] completed? (1 or null)
 
 2. Front-end:
-  [] Form field for tasks
-  [] create task 'submit' button
+  [x] Form field for tasks
+  [x] create task 'submit' button
 
-  [] display submitted tasks
+  [x] display submitted tasks
   [] COMPLETE button
       [] change color of task to green on completion
   [] DELETE button
