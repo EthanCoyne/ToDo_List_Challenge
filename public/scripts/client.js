@@ -2,7 +2,7 @@ $(function() {
   console.log('welcome to the DOM');
   getTasks();
   $('#addTaskButton').on('click', addTask);
-  $('.displayContainer').on('click', '.complete',  completeTask);
+  $('.displayContainer').on('click', '.completeButton',  completeTask);
   $('.displayContainer').on('click', '.delete', deleteTask);
 
 }); // end doc ready
@@ -42,18 +42,35 @@ function displayTasks(tasks) {
 
   tasks.forEach(function(task) {
     var $li = $('<li></li>');
+    var $completedLi = $('<li class="completed"></li>')
 
+    if(task.completed == 0) {
     $li.append('<p id="task'+task.id+'">' + task.task + '</p>');
-    $li.append('<button id="'+task.id+'" class="complete">Complete</button>');
+    $li.append('<button id="'+task.id+'" class="completeButton">Complete</button>');
     $li.append('<button id="'+task.id+'" class="delete">Delete</button>');
-
     $('#taskDisplay').append($li);
+  } else {
+    $completedLi.append('<p id="task'+task.id+'">' + task.task + '</p>');
+    $completedLi.append('<button id="'+task.id+'" class="completeButton">Completed!</button>');
+    $completedLi.append('<button id="'+task.id+'" class="delete">Delete</button>');
+    $('#taskDisplay').append($completedLi);
+  }
+
   }); // end tasks.forEach
 } // end displayTasks()
 
 function completeTask() {
   console.log('completeTask called on', $(this).closest('li'));
   $(this).closest('li').addClass('completed');
+  $(this).text('Completed!');
+  var taskId = $(this).attr('id');
+  $.ajax({
+    url: '/tasks/' + taskId,
+    type: 'PUT',
+    success: function() {
+      console.log('completeTask PUT for: ', taskId);
+    }
+  }); //end ajax PUT
 }// end completeTask()
 
 function deleteTask() {

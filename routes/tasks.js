@@ -54,7 +54,7 @@ router.get('/',function(req,res){
   });
 });//end of GET
 
-router.delete('/:pid',function(req,res){
+router.delete('/:id',function(req,res){
   console.log('req.body:',req.body);
   pool.connect(function(err,client,done){
     if(err){
@@ -65,7 +65,7 @@ router.delete('/:pid',function(req,res){
 
      client.query(
        'DELETE FROM tasks WHERE id = $1',
-                    [req.params.pid],
+                    [req.params.id],
       function(err,result){
         done();
         if(err){
@@ -79,6 +79,31 @@ router.delete('/:pid',function(req,res){
     }
   });
 });//end of DELETE
+
+router.put('/:id',function(req,res){
+  console.log('req.body:',req.body);
+  pool.connect(function(err,client,done){
+    if(err){
+      console.log('error connecting to DB',err);
+      res.sendStatus(500);
+      done();
+    } else {
+     client.query(
+       'UPDATE tasks SET completed=$2 WHERE id = $1 RETURNING *',
+                    [req.params.id, 1],
+      function(err,result){
+        done();
+        if(err){
+          console.log('error querying db',err);
+          res.sendStatus(500);
+        } else {
+          console.log('posted info from db',result.rows);
+          res.send(result.rows);
+        }
+      });
+    }
+  });
+});//end of put
 
 
 

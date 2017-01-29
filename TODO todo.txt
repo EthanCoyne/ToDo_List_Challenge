@@ -20,7 +20,7 @@ whats TODO? Weekend 4 full-stack challenge
   ---STRETCH GOALS---
 
   --Hard mode--
-  [] 'are you sure?' prompt on DELETE
+  [x] 'are you sure?' prompt on DELETE
 
   --Pro mode--
   [] move completed tasks to bottom of page
