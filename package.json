@@ -1,0 +1,22 @@
+{
+  "name": "4_todo_app",
+  "version": "1.0.0",
+  "description": "weekend 4 challenge, todo app",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "weekend_challenge",
+    "todo"
+  ],
+  "author": "ethan coyne",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.16.0",
+    "bootstrap": "^3.3.7",
+    "express": "^4.14.0",
+    "jquery": "^3.1.1",
+    "pg": "^6.1.2"
+  }
+}

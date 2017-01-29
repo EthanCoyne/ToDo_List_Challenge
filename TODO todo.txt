@@ -1,0 +1,26 @@
+whats TODO? Weekend 4 full-stack challenge
+
+1. Create Database:
+  []create todo table, with rows for:
+    [] id
+    [] task
+    [] completed? (1 or null)
+
+2. Front-end:
+  [] Form field for tasks
+  [] create task 'submit' button
+
+  [] display submitted tasks
+  [] COMPLETE button
+      [] change color of task to green on completion
+  [] DELETE button
+
+
+
+  ---STRETCH GOALS---
+
+  --Hard mode--
+  [] 'are you sure?' prompt on DELETE
+
+  --Pro mode--
+  [] move completed tasks to bottom of page
